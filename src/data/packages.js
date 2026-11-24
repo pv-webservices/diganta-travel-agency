@@ -1,0 +1,247 @@
+import { D } from './itinerary-days.js';
+
+const IMG = '/media/img/gen/';
+
+/** Standard inclusions — the written quotation always confirms the final list. */
+const BASE_INCLUSIONS = [
+  'Hand-picked hotel stays on twin sharing with daily breakfast',
+  'Private cruise tickets between the islands (as per itinerary)',
+  'Private AC cab for airport, jetty and sightseeing transfers',
+  'All sightseeing as per the day-by-day plan',
+  'Meet & greet at the airport and on-ground support 24 × 7',
+  'All applicable hotel taxes and driver allowances',
+];
+
+const BASE_EXCLUSIONS = [
+  'Airfare or train fare to and from Sri Vijaya Puram',
+  'Water activities — scuba, sea walk, snorkelling, glass-bottom boat (unless mentioned)',
+  'Entry tickets, camera fees, boat fees for Ross Island & North Bay',
+  'Lunch, dinner and personal expenses',
+  'Anything not mentioned under inclusions',
+];
+
+/**
+ * @typedef {{ id: string, title: string, nights: number, days: number, category: string,
+ *   badge?: string, price?: string, image: string, summary: string, route: string,
+ *   stays: [string, number][], highlights: string[], itinerary: object[],
+ *   extras?: string[], featured?: boolean }} Package
+ */
+
+/** @type {Package[]} */
+const RAW = [
+  {
+    id: 'horizon-classic',
+    title: 'The Horizon Classic',
+    nights: 6, days: 7, category: 'classic', badge: 'Bestseller', price: '₹27,000',
+    image: 'pkg-classic', featured: true,
+    summary: 'A complete Andaman experience covering top islands, beaches and must-see attractions.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 3], ['Swaraj Dweep', 2], ['Shaheed Dweep', 1]],
+    highlights: ['Cellular Jail Light & Sound Show', 'Ross Island & North Bay', 'Radhanagar sunset', 'Elephant Beach', 'Natural Bridge'],
+    itinerary: [D.arrive(), D.rossNorthBay(), D.toHavelock(), D.elephantBeach(), D.kalapatharToNeil(), D.neilToSvp(), D.departure()],
+  },
+  {
+    id: 'honeymoon-by-the-tide',
+    title: 'Honeymoon by the Tide',
+    nights: 5, days: 6, category: 'honeymoon', badge: 'Couples',
+    image: 'pkg-honeymoon', featured: true,
+    summary: 'A romantic island escape with stunning beaches, serene stays and memorable experiences.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 2], ['Swaraj Dweep', 2], ['Shaheed Dweep', 1]],
+    highlights: ['Sea-view rooms', 'Candlelit beach dinner', 'Room decoration', 'Radhanagar sunset', 'Sitapur sunrise'],
+    extras: ['Flower bed decoration on arrival', 'One private candlelit dinner on the beach', 'Honeymoon cake'],
+    itinerary: [D.arriveHoneymoon(), D.toHavelock(), D.candlelitDinner(), D.honeymoonNeil(), D.honeymoonReturn(), D.departure()],
+  },
+  {
+    id: 'family-island-hopper',
+    title: 'Family Island Hopper',
+    nights: 4, days: 5, category: 'family', badge: 'Families',
+    image: 'pkg-family', featured: true,
+    summary: 'A fun-filled Andaman holiday for families with beaches, activities and island exploration.',
+    route: 'Sri Vijaya Puram → Ross & North Bay → Swaraj Dweep',
+    stays: [['Sri Vijaya Puram', 2], ['Swaraj Dweep', 2]],
+    highlights: ['Glass-bottom boats', 'Deer at Ross Island', 'Gentle beaches', 'Short transfers'],
+    extras: ['Family rooms or interconnecting rooms on request'],
+    itinerary: [D.arrive(), D.familyRossNorthBay(), D.toHavelock(), D.familyElephant(), D.departureByCruise()],
+  },
+  {
+    id: 'blue-water-adventure',
+    title: 'Blue Water Adventure',
+    nights: 5, days: 6, category: 'adventure', badge: 'Adventure',
+    image: 'pkg-adventure',
+    summary: 'Scuba, sea walk, snorkelling and night kayaking — the Andaman Sea from the inside out.',
+    route: 'North Bay → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 3], ['Swaraj Dweep', 2]],
+    highlights: ['Sea walk at North Bay', 'Boat scuba dive', 'Bioluminescent kayaking', 'Snorkelling at Neil'],
+    extras: ['One sea walk at North Bay', 'One introductory boat scuba dive at Swaraj Dweep', 'Night kayaking (seasonal)'],
+    itinerary: [D.arrive(), D.seaWalkDay(), D.toHavelock(), D.scubaDay(), D.snorkelNeilReturn(), D.departure()],
+  },
+  {
+    id: 'wild-andaman-expedition',
+    title: 'Wild Andaman Expedition',
+    nights: 8, days: 9, category: 'offbeat', badge: 'Explorers',
+    image: 'pkg-offbeat',
+    summary: 'Mangrove creeks, limestone caves, Saddle Peak and a volcano at sea — the far side of the map.',
+    route: 'Baratang → Rangat → Diglipur → Barren Island',
+    stays: [['Sri Vijaya Puram', 3], ['Baratang', 1], ['Rangat', 1], ['Diglipur', 3]],
+    highlights: ['Limestone caves', 'Parrot Island', 'Ross & Smith sandbar', 'Saddle Peak', 'Barren Island'],
+    extras: ['Local guides in North & Middle Andaman', 'Permit assistance'],
+    itinerary: [D.arrive(), D.toBaratangStay(), D.toRangat(), D.toDiglipur(), D.rossSmith(), D.saddlePeak(), D.diglipurReturn(), D.barrenIsland(), D.departure()],
+  },
+  {
+    id: 'island-escape',
+    title: 'Andaman Island Escape',
+    nights: 4, days: 5, category: 'classic',
+    image: 'post-elephant',
+    summary: 'The short-and-sweet Andaman: the capital, Havelock’s finest beaches and a night on Neil.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 2], ['Swaraj Dweep', 1], ['Shaheed Dweep', 1]],
+    highlights: ['Cellular Jail', 'Elephant Beach', 'Radhanagar Beach', 'Natural Bridge', 'Chidiyatapu'],
+    itinerary: [
+      D.arrive(),
+      { ...D.toHavelock(), title: 'Cruise to Swaraj Dweep · Elephant Beach & Radhanagar', text: 'Early cruise to Swaraj Dweep. Morning speedboat to Elephant Beach for snorkelling over live corals; after lunch, Radhanagar Beach for a swim and sunset.' },
+      D.havelockToNeil(),
+      D.neilToSvpChidiyatapu(),
+      D.departure(),
+    ],
+  },
+  {
+    id: 'havelock-neil-getaway',
+    title: 'Havelock & Neil Getaway',
+    nights: 5, days: 6, category: 'classic',
+    image: 'dest-havelock',
+    summary: 'Two nights on Havelock, one on Neil — beaches, reefs and island sunsets without the rush.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 2], ['Swaraj Dweep', 2], ['Shaheed Dweep', 1]],
+    highlights: ['Radhanagar Beach', 'Elephant Beach', 'Natural Bridge', 'Bharatpur Beach'],
+    itinerary: [D.arrive(), D.toHavelock(), D.elephantBeach(), D.havelockToNeil(), D.neilToSvpMuseums(), D.departure()],
+  },
+  {
+    id: 'andaman-with-baratang',
+    title: 'Andaman with Baratang',
+    nights: 5, days: 6, category: 'offbeat',
+    image: 'dest-baratang',
+    summary: 'The classic islands plus a day in the wild — mangrove creeks, limestone caves and a mud volcano.',
+    route: 'Sri Vijaya Puram → Baratang → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 3], ['Swaraj Dweep', 1], ['Shaheed Dweep', 1]],
+    highlights: ['Baratang limestone caves', 'Mud volcano', 'Radhanagar Beach', 'Natural Bridge'],
+    itinerary: [D.arrive(), D.baratangDayTrip(), D.toHavelock(), D.havelockToNeil(), D.neilToSvpMuseums(), D.departure()],
+  },
+  {
+    id: 'andaman-highlights',
+    title: 'Andaman Highlights',
+    nights: 5, days: 6, category: 'classic',
+    image: 'dest-north-bay',
+    summary: 'Ross Island heritage, North Bay water sports, Radhanagar and a full day on Neil.',
+    route: 'Sri Vijaya Puram → Ross & North Bay → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 3], ['Swaraj Dweep', 1], ['Shaheed Dweep', 1]],
+    highlights: ['Ross Island', 'North Bay', 'Radhanagar Beach', 'Elephant Beach', 'Neil sightseeing'],
+    itinerary: [D.arrive(), D.rossNorthBay(), D.toHavelock(), D.elephantThenNeil(), D.neilToSvp(), D.departure()],
+  },
+  {
+    id: 'coral-heritage-trail',
+    title: 'Coral & Heritage Trail',
+    nights: 6, days: 7, category: 'classic',
+    image: 'dest-ross',
+    summary: 'History and reefs in equal measure — Cellular Jail, Ross Island, North Bay, Havelock and Neil.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 3], ['Swaraj Dweep', 2], ['Shaheed Dweep', 1]],
+    highlights: ['Cellular Jail', 'Ross Island ruins', 'North Bay corals', 'Elephant Beach', 'Museums'],
+    itinerary: [D.arrive(), D.rossNorthBay(), D.toHavelock(), D.elephantBeach(), D.havelockToNeil(), { ...D.neilToSvpMuseums(), title: 'Return cruise · City tour & museums', text: 'Morning cruise back to Sri Vijaya Puram. Afternoon city tour: Anthropological Museum, Samudrika Naval Marine Museum and Chatham Saw Mill, ending with shopping at Aberdeen Bazaar.' }, D.departure()],
+  },
+  {
+    id: 'three-island-sojourn',
+    title: 'Three Island Sojourn',
+    nights: 6, days: 7, category: 'classic',
+    image: 'dest-neil',
+    summary: 'Two unhurried nights on each island — the slow way to see Andaman.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 2], ['Swaraj Dweep', 2], ['Shaheed Dweep', 2]],
+    highlights: ['Radhanagar Beach', 'Elephant Beach', 'Sitapur sunrise', 'Bharatpur reef'],
+    itinerary: [D.arrive(), D.toHavelock(), D.elephantBeach(), D.havelockToNeil(), D.neilFull(), D.neilToSvpMuseums(), D.departure()],
+  },
+  {
+    id: 'havelock-long-stay',
+    title: 'Havelock Long Stay',
+    nights: 7, days: 8, category: 'honeymoon',
+    image: 'why-resort',
+    summary: 'Three nights on Swaraj Dweep for divers, beach lovers and honeymooners who never want to leave.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 3], ['Swaraj Dweep', 3], ['Shaheed Dweep', 1]],
+    highlights: ['Kalapathar sunrise', 'Elephant Beach', 'Optional scuba', 'Ross & North Bay', 'Chidiyatapu'],
+    itinerary: [D.arrive(), D.rossNorthBay(), D.toHavelock(), D.elephantBeach(), D.havelockLeisure(), D.havelockToNeil(), D.neilToSvpChidiyatapu(), D.departure()],
+  },
+  {
+    id: 'andaman-complete',
+    title: 'Andaman Complete',
+    nights: 7, days: 8, category: 'family',
+    image: 'svc-sightseeing',
+    summary: 'Everything in one trip: Ross & North Bay, two nights on Havelock, a night on Neil and a full city tour.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep',
+    stays: [['Sri Vijaya Puram', 4], ['Swaraj Dweep', 2], ['Shaheed Dweep', 1]],
+    highlights: ['Ross & North Bay', 'Radhanagar', 'Natural Bridge', 'Chidiyatapu sunset', 'City tour & museums'],
+    itinerary: [D.arrive(), D.rossNorthBay(), D.toHavelock(), D.elephantBeach(), D.havelockToNeil(), D.neilToSvpChidiyatapu(), D.cityTour(), D.departure()],
+  },
+  {
+    id: 'discovery-with-baratang',
+    title: 'Andaman Discovery with Baratang',
+    nights: 8, days: 9, category: 'family',
+    image: 'post-mangrove',
+    summary: 'Two nights each on Havelock and Neil, Ross & North Bay, and a convoy journey to Baratang.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep → Baratang',
+    stays: [['Sri Vijaya Puram', 4], ['Swaraj Dweep', 2], ['Shaheed Dweep', 2]],
+    highlights: ['Ross & North Bay', 'Elephant Beach', 'Bharatpur reef', 'Baratang caves'],
+    itinerary: [D.arrive(), D.rossNorthBay(), D.toHavelock(), D.elephantBeach(), D.havelockToNeil(), D.neilFull(), D.neilToSvpMuseums(), D.baratangDayTrip(), D.departure()],
+  },
+  {
+    id: 'grand-andaman',
+    title: 'Grand Andaman with Baratang',
+    nights: 9, days: 10, category: 'honeymoon',
+    image: 'hero-aerial',
+    summary: 'Three nights on Havelock, two on Neil, Ross & North Bay, museums and a Baratang day trip.',
+    route: 'Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep → Baratang',
+    stays: [['Sri Vijaya Puram', 4], ['Swaraj Dweep', 3], ['Shaheed Dweep', 2]],
+    highlights: ['Three nights on Havelock', 'Kalapathar', 'Sitapur sunrise', 'Baratang caves'],
+    itinerary: [D.arrive(), D.rossNorthBay(), D.toHavelock(), D.elephantBeach(), D.havelockLeisure(), D.havelockToNeil(), D.neilFull(), D.neilToSvpMuseums(), D.baratangDayTrip(), D.departure()],
+  },
+  {
+    id: 'north-to-south',
+    title: 'North to South Andaman',
+    nights: 10, days: 11, category: 'offbeat',
+    image: 'dest-ross-smith',
+    summary: 'The whole archipelago by road and sea — from Havelock’s beaches to the twin islands of Diglipur.',
+    route: 'Sri Vijaya Puram → Havelock → Neil → Mayabunder → Diglipur → Rangat',
+    stays: [['Sri Vijaya Puram', 4], ['Swaraj Dweep', 2], ['Shaheed Dweep', 1], ['Mayabunder', 1], ['Diglipur', 1], ['Rangat', 1]],
+    highlights: ['Radhanagar', 'Elephant Beach', 'Baratang caves', 'Ross & Smith', 'Rangat beaches'],
+    itinerary: [D.arrive(), D.toHavelock(), D.elephantBeach(), D.havelockToNeil(), D.neilToSvpMuseums(), D.mayabunderStay(), D.diglipurFromMayabunder(), D.rangatBeaches(), D.rangatToSvp(), D.rossNorthBay(), D.departure()],
+  },
+];
+
+/** Attach derived fields without mutating the source records. */
+export const PACKAGES = Object.freeze(RAW.map((pkg) => Object.freeze({
+  ...pkg,
+  img: `${IMG}${pkg.image}.webp`,
+  imgSm: `${IMG}${pkg.image}-sm.webp`,
+  duration: `${pkg.nights} Nights / ${pkg.days} Days`,
+  inclusions: [...BASE_INCLUSIONS, ...(pkg.extras ?? [])],
+  exclusions: BASE_EXCLUSIONS,
+})));
+
+export const CATEGORIES = Object.freeze([
+  { id: 'all', label: 'All packages' },
+  { id: 'classic', label: 'Classic' },
+  { id: 'honeymoon', label: 'Honeymoon' },
+  { id: 'family', label: 'Family' },
+  { id: 'adventure', label: 'Adventure' },
+  { id: 'offbeat', label: 'Offbeat' },
+]);
+
+export const DURATIONS = Object.freeze([
+  { id: 'all', label: 'Any length', test: () => true },
+  { id: 'short', label: '4–5 nights', test: (p) => p.nights <= 5 },
+  { id: 'week', label: '6 nights', test: (p) => p.nights === 6 },
+  { id: 'long', label: '7+ nights', test: (p) => p.nights >= 7 },
+]);
+
+/** @param {string} id @returns {Package | undefined} */
+export const findPackage = (id) => PACKAGES.find((p) => p.id === id);

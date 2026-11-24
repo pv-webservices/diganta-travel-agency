@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- @include head -->
+  <title>Andaman Destination Guide | Diganta Travels</title>
+  <meta name="description" content="Things to do, how to reach and how long to stay — an Andaman island guide from the local Diganta Travels team." />
+  <script type="module" src="/src/pages/destination.js"></script>
+</head>
+<body data-page="destination">
+  <!-- @include header -->
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__bg"><img data-d-hero src="/media/img/gen/dest-havelock.webp" alt="" /></div>
+      <div class="container">
+        <ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/destinations.html">Destinations</a></li><li data-d-crumb>Guide</li></ol>
+        <span class="badge" data-d-alias hidden></span>
+        <h1 data-d-title>Island guide</h1>
+        <p data-d-tagline></p>
+        <div class="page-hero__meta" data-d-meta></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 24px">
+      <div class="container with-aside" data-d-body>
+        <div>
+          <div class="block">
+            <h2>About <em data-d-name></em></h2>
+            <p class="lead" data-d-intro></p>
+            <div class="note-box" data-d-note hidden><svg class="ic"><use href="#i-sun"/></svg><p></p></div>
+          </div>
+          <div class="block">
+            <h2>Things to <em>see &amp; do</em></h2>
+            <div class="attractions" data-d-attractions></div>
+          </div>
+          <div class="block" data-d-routes-wrap>
+            <h2>Getting <em>there</em></h2>
+            <div class="route-list" data-d-routes></div>
+            <p class="disclaimer">Indicative durations — we confirm every crossing in your itinerary. <a class="link-arrow" href="/destinations.html#ferry-routes">All ferry routes <svg class="ic"><use href="#i-arrow"/></svg></a></p>
+          </div>
+        </div>
+        <aside class="aside">
+          <div class="panel">
+            <h3>Quick facts</h3>
+            <div class="facts" data-d-facts></div>
+          </div>
+          <div class="panel panel--dark">
+            <h3>Plan a trip here</h3>
+            <p>We’ll build an itinerary around <span data-d-name></span> with hotels, ferries and cabs arranged.</p>
+            <a class="btn btn--sun btn--block" data-d-plan href="/contact.html#plan">Plan My Trip <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--sand" data-d-pkgs-wrap>
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div><span class="eyebrow">Packages that include it</span><h2>Journeys through <em data-d-name></em></h2></div>
+          <a class="btn btn--outline" href="/packages.html">All Packages <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="pkg-grid" data-d-pkgs></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Keep exploring</span><h2>Other <em>islands</em></h2></div>
+        <div class="mini-dests" data-d-others></div>
+      </div>
+    </section>
+  </main>
+  <!-- @include footer -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- @include head -->
+  <title>Andaman Destinations &amp; Ferry Routes · Havelock, Neil, Baratang | Diganta Travels</title>
+  <meta name="description" content="Explore the Andaman Islands open to travellers — Sri Vijaya Puram, Swaraj Dweep (Havelock), Shaheed Dweep (Neil), Ross Island, North Bay, Baratang, Rangat, Diglipur and Barren Island — plus every ferry route, operator and crossing time." />
+  <meta property="og:title" content="Andaman Destinations &amp; Ferry Routes — Diganta Travels" />
+  <script type="module" src="/src/pages/destinations.js"></script>
+</head>
+<body data-page="destinations">
+  <!-- @include header -->
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__bg"><img src="/media/img/gen/dest-havelock.webp" alt="" /></div>
+      <div class="container">
+        <ol class="crumbs"><li><a href="/">Home</a></li><li>Destinations</li></ol>
+        <h1>Explore <em>the islands</em></h1>
+        <p>Nine islands and regions open to travellers, from the white beaches of Swaraj Dweep to the volcano at sea. Pick your favourites — we’ll connect them by cruise, boat and road.</p>
+        <a class="btn btn--sun" href="#ferry-routes"><svg class="ic"><use href="#i-ship"/></svg>See Ferry Routes</a>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 24px">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Most loved places</span>
+          <h2>Top destinations <em>in Andaman</em></h2>
+          <p>Every trip starts in Sri Vijaya Puram. Most travellers add Swaraj Dweep and Shaheed Dweep; explorers head north to Baratang, Rangat and Diglipur.</p>
+        </div>
+        <div class="dest-grid" data-dest-grid></div>
+      </div>
+    </section>
+
+    <!-- ============ DESTINATION & FERRY ROUTES ============ -->
+    <section class="section ferry-section" id="ferry-routes">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Destination &amp; ferry routes</span>
+          <h2>How the islands <em class="swoosh">connect</em></h2>
+          <p>Private cruises link Sri Vijaya Puram, Swaraj Dweep and Shaheed Dweep several times a day; small boats run to Ross Island and North Bay; the road heads north to Baratang and Diglipur. Tap or hover a route to trace it on the map.</p>
+        </div>
+        <div class="ferry-stats">
+          <div data-reveal><svg class="ic"><use href="#i-ship"/></svg><span><strong>5</strong>ferry operators</span></div>
+          <div data-reveal style="--d:.06s"><svg class="ic"><use href="#i-clock"/></svg><span><strong>45 min</strong>fastest island hop</span></div>
+          <div data-reveal style="--d:.12s"><svg class="ic"><use href="#i-route"/></svg><span><strong>7</strong>routes we plan</span></div>
+          <div data-reveal style="--d:.18s"><svg class="ic"><use href="#i-ticket"/></svg><span><strong>Included</strong>in every package</span></div>
+        </div>
+        <div class="ferry">
+          <figure class="ferry-map" aria-label="Schematic map of Andaman ferry and road routes">
+            <figcaption class="ferry-map__legend">
+              <span><i></i>Private cruise</span>
+              <span><i class="boat"></i>Boat</span>
+              <span><i class="road"></i>Road</span>
+            </figcaption>
+            <div data-ferry-map></div>
+            <p class="ferry-map__note">Schematic map — not to scale</p>
+          </figure>
+          <div>
+            <p class="ferry-swipe-hint"><svg class="ic"><use href="#i-arrow"/></svg>Swipe through the routes</p>
+            <div class="route-list" data-route-list></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Who sails where</span>
+          <h2>Ferry <em>operators</em></h2>
+        </div>
+        <div class="operator-grid" data-operators></div>
+        <div class="mt-lg">
+          <h3>Ferry <em class="accent">tips</em> from our team</h3>
+          <ul class="tips" data-ferry-tips></ul>
+          <p class="disclaimer">Durations, departure windows and fares are indicative and change with season and operator. We confirm the exact sailing, class and fare in your itinerary.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight section--mint">
+      <div class="container center">
+        <h2>Want us to <em>book your crossings?</em></h2>
+        <p class="muted">Cruise tickets are included in every Diganta package — or ask us to book them on their own.</p>
+        <a class="btn" href="/contact.html?style=Ferry%20booking#plan">Enquire about ferry tickets <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+  </main>
+  <!-- @include footer -->
+</body>
+</html>

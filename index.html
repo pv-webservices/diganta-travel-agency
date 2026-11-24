@@ -1,21 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Diganta Travels · Andaman Tour Packages from Sri Vijaya Puram</title>
-  <meta name="description" content="Diganta Travels Pvt. Ltd. — Andaman tour operator in Sri Vijaya Puram (Port Blair) with 17 years of expertise. Custom honeymoon, family and adventure packages to Havelock, Neil, Baratang, Diglipur and beyond. Rated 5.0★ by 1,100+ travellers." />
-  <meta name="theme-color" content="#062219" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Diganta Travels — Journey Beyond the Horizon" />
-  <meta property="og:description" content="Handcrafted Andaman journeys by a local team with 17 years on the islands. 5.0★ on Google." />
-  <meta property="og:image" content="/media/img/hero-horizon.webp" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="/media/img/hero-horizon.webp" media="(min-width: 768px)" />
-  <link rel="preload" as="image" href="/media/img/hero-horizon-sm.webp" media="(max-width: 767px)" />
+  <!-- @include head -->
+  <title>Diganta Travels · Andaman Tour Packages by Local Experts in Sri Vijaya Puram</title>
+  <meta name="description" content="Diganta Travels Pvt. Ltd. — Andaman tour operator in Sri Vijaya Puram (Port Blair). Honeymoon, family and adventure packages to Havelock, Neil, Baratang and Diglipur with ferries, hotels and cabs arranged. Rated 5.0★ by 1,100+ travellers." />
+  <meta property="og:title" content="Diganta Travels — Discover the Andaman beyond the ordinary" />
+  <meta property="og:description" content="Locally planned Andaman holidays: ferries, hotels, cabs and sightseeing arranged end to end." />
+  <link rel="preload" as="image" href="/media/img/gen/hero-mobile-780.webp" media="(max-width: 767px)" />
+  <link rel="preload" as="image" href="/media/img/gen/hero-desktop-1600.webp" imagesrcset="/media/img/gen/hero-desktop-1600.webp 1600w, /media/img/gen/hero-desktop-2560.webp 2560w" imagesizes="100vw" media="(min-width: 768px)" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,6 +15,7 @@
     "name": "Diganta Travels Pvt. Ltd.",
     "image": "/media/img/logo.png",
     "telephone": "+91-8001661774",
+    "email": "info@digantatravels.in",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Katchal Inn Hotel, Babu Lane, Mohanpura",
@@ -37,640 +30,243 @@
     "sameAs": ["https://www.instagram.com/andamandiganta/"]
   }
   </script>
-  <style>
-    /* Critical: paint only the loading screen until the main stylesheet is in. */
-    html, body { margin: 0; background: #f5efe3; }
-    html:not(.css-ready) body > :not(.preloader),
-    html:not(.css-ready) .preloader > * { visibility: hidden; }
-    .preloader { position: fixed; inset: 0; z-index: 900; background: #f5efe3; }
-  </style>
-  <noscript><style>html:not(.css-ready) body > :not(.preloader) { visibility: visible; } .preloader { display: none; }</style></noscript>
+  <script type="module" src="/src/pages/home.js"></script>
 </head>
-<body class="is-loading">
-  <a class="skip-link" href="#story">Skip to content</a>
-
-  <!-- ============ PRELOADER: the horizon is drawn, the sun rises ============ -->
-  <div class="preloader" aria-hidden="true">
-    <div class="preloader__sky"></div>
-    <div class="preloader__sea"></div>
-    <div class="preloader__center">
-      <div class="preloader__mask"><div class="preloader__sun"></div></div>
-      <div class="preloader__line"></div>
-    </div>
-    <p class="preloader__word"><span>Diganta</span><em>— the horizon —</em></p>
-    <div class="preloader__meta mono">
-      <span>Charting your course</span>
-      <span class="preloader__count">000</span>
-    </div>
-  </div>
-
-  <!-- ============ CURSOR ============ -->
-  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
-
-  <!-- ============ NAV ============ -->
-  <header class="nav">
-    <a href="#top" class="nav__logo" aria-label="Diganta Travels — home">
-      <img src="/media/img/logo.webp" alt="Diganta Travels Pvt. Ltd." width="900" height="297" />
-    </a>
-    <div class="nav__chapter mono" aria-live="polite">
-      <span class="nav__chapter-num">00</span>
-      <span class="nav__chapter-sep"></span>
-      <span class="nav__chapter-name">The Horizon</span>
-    </div>
-    <div class="nav__actions">
-      <a class="btn btn--sun btn--sm nav__cta" href="#plan" data-cursor="Plan">
-        <span>Plan my trip</span>
-      </a>
-      <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- ============ FULLSCREEN MENU ============ -->
-  <nav class="menu" id="menu" aria-hidden="true">
-    <div class="menu__bg"></div>
-    <div class="menu__inner">
-      <ol class="menu__list">
-        <li><a href="#top"><span class="mono">00</span>The Horizon</a></li>
-        <li><a href="#story"><span class="mono">01</span>Departure</a></li>
-        <li><a href="#crossing"><span class="mono">02</span>The Crossing</a></li>
-        <li><a href="#volcano"><span class="mono">03</span>Fire at Sea</a></li>
-        <li><a href="#blue"><span class="mono">04</span>Into the Blue</a></li>
-        <li><a href="#voyages"><span class="mono">05</span>Voyages</a></li>
-        <li><a href="#postcards"><span class="mono">06</span>Postcards</a></li>
-        <li><a href="#plan"><span class="mono">07</span>Arrival</a></li>
-      </ol>
-      <div class="menu__side">
-        <p class="mono">Open 24 hours · Sri Vijaya Puram</p>
-        <a class="menu__phone" data-tel href="tel:+918001661774">080016 61774</a>
-        <a class="menu__ig" href="https://www.instagram.com/andamandiganta/" target="_blank" rel="noopener">Instagram ↗</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ============ JOURNEY HUD ============ -->
-  <aside class="hud" aria-hidden="true">
-    <div class="hud__track"><div class="hud__fill"></div></div>
-    <svg class="hud__boat" viewBox="0 0 24 24"><path d="M4 14h16l-2.5 5h-11z" fill="currentColor"/><path d="M12 3v10M12 4l6 8h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-    <div class="hud__coords mono"><span class="hud__lat">11.6234° N</span><span class="hud__lon">92.7265° E</span></div>
-  </aside>
-  <div class="progress-bar" aria-hidden="true"><span></span></div>
+<body data-page="home">
+  <!-- @include header -->
 
   <main id="main">
-    <!-- ================= 00 · HERO ================= -->
-    <section class="hero" id="top" data-chapter="00" data-chapter-name="The Horizon">
-      <div class="hero__stage">
-        <div class="hero__scene">
-          <div class="hero__sky">
-            <picture>
-              <source media="(max-width: 767px)" srcset="/media/img/hero-horizon-sm.webp" />
-              <img src="/media/img/hero-horizon.webp" alt="" class="hero__img" fetchpriority="high" />
-            </picture>
-          </div>
-          <div class="hero__dusk"></div>
-          <div class="hero__sun"><span></span></div>
-          <svg class="hero__ship" viewBox="0 0 120 40" aria-hidden="true">
-            <path d="M6 30 L114 30 L104 38 L16 38 Z" />
-            <path d="M22 30 L26 20 L86 20 L92 30 Z" />
-            <path d="M34 20 L38 13 L74 13 L78 20 Z" />
-            <rect x="52" y="5" width="7" height="8" />
-          </svg>
-          <h1 class="hero__title" aria-label="Andaman">
-            <span class="hero__word" aria-hidden="true">Andaman</span>
-          </h1>
-          <div class="hero__sea">
-            <picture>
-              <source media="(max-width: 767px)" srcset="/media/img/hero-horizon-sm.webp" />
-              <img src="/media/img/hero-horizon.webp" alt="Turquoise Andaman Sea meeting the sky at the horizon" class="hero__img" />
-            </picture>
-            <div class="hero__reflection" aria-hidden="true"><span>Andaman</span></div>
-            <div class="hero__glint"></div>
-          </div>
-          <svg class="hero__birds" viewBox="0 0 200 60" aria-hidden="true">
-            <path class="bird b1" d="M10 30 q8 -9 16 0 q8 -9 16 0" />
-            <path class="bird b2" d="M70 14 q6 -7 12 0 q6 -7 12 0" />
-            <path class="bird b3" d="M120 40 q5 -6 10 0 q5 -6 10 0" />
-          </svg>
-        </div>
-        <div class="hero__shade"></div>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <picture class="hero__bg">
+        <source media="(max-width: 767px)" srcset="/media/img/gen/hero-mobile-780.webp 780w, /media/img/gen/hero-mobile-1152.webp 1152w" sizes="100vw" />
+        <img src="/media/img/gen/hero-desktop-1600.webp" srcset="/media/img/gen/hero-desktop-1600.webp 1600w, /media/img/gen/hero-desktop-2560.webp 2560w" sizes="100vw"
+          alt="Aerial view of a white-sand beach curving between turquoise shallows and rainforest in the Andaman Islands" fetchpriority="high" width="2560" height="1440" />
+      </picture>
 
-        <div class="hero__ui">
-          <p class="hero__kicker">
-            <span class="hero__kicker-word">Diganta</span>
-            <span class="hero__kicker-def"><em>noun</em> — the line where the sky meets the sea.</span>
-          </p>
-          <div class="hero__bottom">
-            <p class="hero__sub">Every great journey begins at the horizon. For 17 years we have been charting the Andaman Islands for travellers who want more than a holiday.</p>
-            <div class="hero__ctas">
-              <a href="#story" class="btn btn--light" data-cursor="Sail"><span>Begin the journey</span>
-                <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 4v16m0 0-6-6m6 6 6-6"/></svg></a>
-              <a href="#plan" class="btn btn--ghost-light"><span>Plan my trip</span></a>
-            </div>
-          </div>
-          <div class="hero__meta mono">
-            <span class="hero__rating"><b>5.0</b> <i class="stars">★★★★★</i> 1,143 Google reviews</span>
-            <span class="hero__coord">11.6234° N · 92.7265° E</span>
-          </div>
-          <div class="hero__scroll mono" aria-hidden="true">
-            <span>Scroll to set sail</span>
-            <svg viewBox="0 0 80 12"><path d="M0 6 q10 -6 20 0 t20 0 t20 0 t20 0" /></svg>
-          </div>
+      <div class="container hero__content">
+        <a class="hero__badge" href="/about.html">
+          <span class="stars" aria-hidden="true">★★★★★</span><b>5.0</b><span>· 1,143 Google reviews</span>
+        </a>
+        <h1 class="hero__title">
+          <span class="hero__line">Discover the</span>
+          <span class="hero__big"><em class="swoosh">Andaman</em></span>
+          <span class="hero__line">beyond the ordinary</span>
+        </h1>
+        <p class="hero__text">Pristine beaches, vibrant coral reefs, lush island trails and unforgettable experiences — plan your perfect Andaman getaway with Diganta Travels Pvt. Ltd.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--sun btn--lg" href="/packages.html">Explore Packages <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost btn--lg" href="/contact.html#plan"><svg class="ic"><use href="#i-calendar"/></svg>Plan My Trip</a>
         </div>
-        <div class="hero__tide" aria-hidden="true">
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 60 C 240 0 480 120 720 60 S 1200 0 1440 60 V120 H0Z"/></svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 01 · DEPARTURE ================= -->
-    <section class="story" id="story" data-chapter="01" data-chapter-name="Departure">
-      <div class="container">
-        <p class="chapter-tag mono reveal-up"><span>Chapter 01</span><i></i><span>Departure</span></p>
-        <div class="story__grid">
-          <p class="story__manifesto" data-scrub-words>
-            For seventeen years we have learned the language of these islands — the tides, the ferries, the hidden coves and the quiet sunsets. We don’t sell packages. We chart journeys, shaped around you, from the moment you land in Sri Vijaya Puram to your last golden evening on the sand.
-          </p>
-          <figure class="story__photo story__photo--a" data-parallax="-12">
-            <img src="/media/img/photo-1-sm.webp" srcset="/media/img/photo-1-sm.webp 800w, /media/img/photo-1.webp 1200w" sizes="(max-width: 767px) 50vw, 22vw" alt="Traveller pointing towards the sea from the bow of a ship" loading="lazy" />
-            <figcaption class="mono">On deck · bound for the islands</figcaption>
-          </figure>
-          <figure class="story__photo story__photo--b" data-parallax="10">
-            <img src="/media/img/photo-8-sm.webp" alt="Standing on a jetty above clear turquoise water" loading="lazy" />
-            <figcaption class="mono">Jetty days</figcaption>
-          </figure>
-        </div>
-
-        <ul class="stats">
-          <li class="stat">
-            <span class="stat__num"><b data-count="17">0</b><sup>+</sup></span>
-            <span class="stat__label">Years charting the Andamans</span>
-          </li>
-          <li class="stat">
-            <span class="stat__num"><b data-count="5.0" data-decimals="1">0</b><sup>★</sup></span>
-            <span class="stat__label">Google rating, unbroken</span>
-          </li>
-          <li class="stat">
-            <span class="stat__num"><b data-count="1143">0</b></span>
-            <span class="stat__label">Google reviews from travellers</span>
-          </li>
-          <li class="stat">
-            <span class="stat__num"><b data-count="24">0</b><sup>/7</sup></span>
-            <span class="stat__label">On-ground support, day &amp; night</span>
-          </li>
+        <ul class="hero__trust">
+          <li><svg class="ic"><use href="#i-shield"/></svg>17+ years local</li>
+          <li><svg class="ic"><use href="#i-headset"/></svg>24 × 7 support</li>
+          <li><svg class="ic"><use href="#i-ship"/></svg>Cruise tickets sorted</li>
         </ul>
       </div>
-      <div class="marquee marquee--story" aria-hidden="true">
-        <div class="marquee__track">
-          <span>Sri Vijaya Puram</span><i>✺</i><span>Swaraj Dweep</span><i>✺</i><span>Shaheed Dweep</span><i>✺</i><span>Baratang</span><i>✺</i><span>Barren Island</span><i>✺</i><span>Diglipur</span><i>✺</i><span>Ross &amp; Smith</span><i>✺</i><span>Long Island</span><i>✺</i>
-        </div>
-      </div>
+
+      <a class="hero__tag" href="/destination.html?id=havelock">
+        <svg class="ic"><use href="#i-pin"/></svg><span><b>Swaraj Dweep</b>Radhanagar Beach</span>
+      </a>
+      <a class="hero__card" href="/package.html?id=horizon-classic">
+        <img src="/media/img/gen/pkg-classic-sm.webp" alt="" width="760" height="507" />
+        <span class="hero__card-body">
+          <span class="badge">Bestseller</span>
+          <b>The Horizon Classic</b>
+          <small><svg class="ic ic--sm"><use href="#i-calendar"/></svg>6 Nights / 7 Days</small>
+          <span class="hero__card-price">Starting <strong>₹27,000</strong></span>
+        </span>
+      </a>
+
+      <svg class="hero__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path class="hero__wave-back" d="M0 70 C240 20 420 110 720 62 C1000 18 1200 96 1440 50 V120 H0 Z"/>
+        <path class="hero__wave-front" d="M0 92 C260 52 480 124 760 86 C1040 50 1220 112 1440 80 V120 H0 Z"/>
+      </svg>
     </section>
 
-    <!-- ================= 02 · THE CROSSING (map journey) ================= -->
-    <section class="crossing" id="crossing" data-chapter="02" data-chapter-name="The Crossing">
-      <div class="crossing__pin">
-        <div class="crossing__map">
-          <svg class="chart" viewBox="0 0 520 884" preserveAspectRatio="xMidYMid meet" aria-label="Stylised chart of the Andaman Islands with the Diganta route">
-            <defs>
-              <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
-                <path d="M26 0H0V26" fill="none" class="chart__gridline" />
-              </pattern>
-              <radialGradient id="emberGlow"><stop offset="0" stop-color="#ff7a2b" stop-opacity=".9"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient>
-              <filter id="soft"><feGaussianBlur stdDeviation="6"/></filter>
-            </defs>
-            <rect x="-1000" y="-1000" width="2520" height="2884" fill="url(#grid)" />
-            <g class="chart__contours"></g>
-            <g class="chart__islands"></g>
-            <g class="chart__labels"></g>
-            <path class="chart__route chart__route--ghost" />
-            <path class="chart__route chart__route--live" />
-            <g class="chart__stops"></g>
-            <g class="chart__boat">
-              <circle r="14" class="chart__boat-halo" />
-              <path d="M-8 2h16l-3 5h-10z M0 -9v10 M0 -8l6 8h-6" class="chart__boat-icon" />
-            </g>
-          </svg>
-          <div class="crossing__compass mono" aria-hidden="true">
-            <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="27"/><path d="M30 6 L35 30 L30 54 L25 30Z"/><text x="30" y="5">N</text></svg>
+    <!-- Quick quote bar -->
+    <div class="container">
+      <form class="quote-bar" action="/contact.html" method="get" data-reveal>
+        <label class="quote-bar__field">
+          <svg class="ic ic--lg"><use href="#i-calendar"/></svg>
+          <span><b>Travel Month</b>
+            <select name="month" data-month-options aria-label="Travel month"><option value="">Select Month</option></select>
+          </span>
+        </label>
+        <label class="quote-bar__field">
+          <svg class="ic ic--lg"><use href="#i-users"/></svg>
+          <span><b>Travellers</b>
+            <select name="travellers" aria-label="Travellers">
+              <option>1 Traveller</option><option selected>2 Travellers</option><option>3 Travellers</option><option>4 Travellers</option><option>5–8 Travellers</option><option>Group (9+)</option>
+            </select>
+          </span>
+        </label>
+        <label class="quote-bar__field">
+          <svg class="ic ic--lg"><use href="#i-palm"/></svg>
+          <span><b>Trip Style</b>
+            <select name="style" aria-label="Trip style">
+              <option value="">Leisure / Adventure / Honeymoon</option><option>Leisure</option><option>Honeymoon</option><option>Family</option><option>Adventure</option><option>Offbeat</option>
+            </select>
+          </span>
+        </label>
+        <button class="btn btn--lg quote-bar__btn" type="submit">Get Custom Quote <svg class="ic"><use href="#i-arrow"/></svg></button>
+      </form>
+    </div>
+
+    <!-- ================= YOUR ISLANDS, YOUR WAY ================= -->
+    <section class="section--tight intro">
+      <div class="container intro__inner">
+        <h2 class="intro__title" data-reveal>Your islands, <em class="swoosh">your way</em></h2>
+        <p class="intro__text" data-reveal>At Diganta Travels Pvt. Ltd., we help you experience the Andaman &amp; Nicobar Islands in a way that’s personal, seamless and truly memorable.</p>
+        <div class="intro__features">
+          <div class="feature" data-reveal style="--d:.05s">
+            <span class="feature__icon"><svg class="ic"><use href="#i-pin"/></svg></span>
+            <div><h3>Locally Planned Journeys</h3><p>On-ground expertise for a smoother island experience.</p></div>
           </div>
-        </div>
-
-        <div class="crossing__panel">
-          <p class="chapter-tag mono"><span>Chapter 02</span><i></i><span>The Crossing</span></p>
-          <h2 class="crossing__heading">Six islands.<br /><em>One unbroken journey.</em></h2>
-          <div class="stops">
-            <article class="stop" data-stop="0" data-lat="11.6234" data-lon="92.7265">
-              <div class="stop__media"><img src="/media/img/photo-12-sm.webp" alt="Harbour of Sri Vijaya Puram" loading="lazy" /></div>
-              <div class="stop__body">
-                <div class="stop__head">
-                  <p class="stop__num mono">01 / 06 · Arrive by air</p>
-                  <h3 class="stop__name">Sri Vijaya Puram</h3>
-                  <p class="stop__alt mono">formerly Port Blair · 11.62° N 92.72° E</p>
-                </div>
-                <p class="stop__text">Where every Diganta journey begins. We meet you at the airport and ease you in — Cellular Jail’s light-and-sound show, Corbyn’s Cove, and boat trips to Ross Island and North Bay.</p>
-                <ul class="chips"><li>Cellular Jail</li><li>Ross Island</li><li>North Bay</li><li>Chidiya Tapu</li></ul>
-              </div>
-            </article>
-            <article class="stop" data-stop="1" data-lat="11.985" data-lon="92.965">
-              <div class="stop__media"><img src="/media/img/photo-5-sm.webp" alt="White-sand beach shaded by a sea-almond tree" loading="lazy" /></div>
-              <div class="stop__body">
-                <div class="stop__head">
-                  <p class="stop__num mono">02 / 06 · ≈ 2 hrs by cruise</p>
-                  <h3 class="stop__name">Swaraj Dweep</h3>
-                  <p class="stop__alt mono">formerly Havelock · 11.98° N 92.96° E</p>
-                </div>
-                <p class="stop__text">Powder-white sand and water in impossible blues. Sunset at Radhanagar, snorkelling at Elephant Beach, and the islands’ best dive sites just offshore.</p>
-                <ul class="chips"><li>Radhanagar Beach</li><li>Elephant Beach</li><li>Kalapathar</li><li>Scuba</li></ul>
-              </div>
-            </article>
-            <article class="stop" data-stop="2" data-lat="11.832" data-lon="93.025">
-              <div class="stop__media"><img src="/media/img/photo-4-sm.webp" alt="Traveller crouching on a wide empty beach" loading="lazy" /></div>
-              <div class="stop__body">
-                <div class="stop__head">
-                  <p class="stop__num mono">03 / 06 · ≈ 1 hr from Swaraj Dweep</p>
-                  <h3 class="stop__name">Shaheed Dweep</h3>
-                  <p class="stop__alt mono">formerly Neil Island · 11.83° N 93.02° E</p>
-                </div>
-                <p class="stop__text">The slow island. Cycle between villages, walk under the Natural Rock bridge at low tide, and watch the sun rise over Sitapur.</p>
-                <ul class="chips"><li>Natural Bridge</li><li>Laxmanpur</li><li>Bharatpur</li><li>Sitapur</li></ul>
-              </div>
-            </article>
-            <article class="stop" data-stop="3" data-lat="12.12" data-lon="92.78">
-              <div class="stop__media"><img src="/media/img/exp-mangrove-sm.webp" alt="Wooden boat in a narrow mangrove creek" loading="lazy" /></div>
-              <div class="stop__body">
-                <div class="stop__head">
-                  <p class="stop__num mono">04 / 06 · Road &amp; creek safari</p>
-                  <h3 class="stop__name">Baratang</h3>
-                  <p class="stop__alt mono">Middle Andaman · 12.12° N 92.78° E</p>
-                </div>
-                <p class="stop__text">Speedboats through tunnels of mangroves, a jungle walk to ancient limestone caves, bubbling mud volcanoes and a dusk full of parrots.</p>
-                <ul class="chips"><li>Limestone Caves</li><li>Mud Volcano</li><li>Parrot Island</li></ul>
-              </div>
-            </article>
-            <article class="stop" data-stop="4" data-lat="12.278" data-lon="93.858">
-              <div class="stop__media"><img src="/media/img/photo-2-sm.webp" alt="Barren Island volcano glowing at dusk" loading="lazy" /></div>
-              <div class="stop__body">
-                <div class="stop__head">
-                  <p class="stop__num mono">05 / 06 · Day voyage by sea</p>
-                  <h3 class="stop__name">Barren Island</h3>
-                  <p class="stop__alt mono">Andaman Sea · 12.27° N 93.85° E</p>
-                </div>
-                <p class="stop__text">India’s only active volcano, rising straight out of the deep sea. Seen from the deck — smoke on the summit, black lava slopes, ink-blue water.</p>
-                <ul class="chips"><li>Active Volcano</li><li>Deep-sea views</li><li>Sail-by</li></ul>
-              </div>
-            </article>
-            <article class="stop" data-stop="5" data-lat="13.265" data-lon="93.01">
-              <div class="stop__media"><img src="/media/img/photo-9-sm.webp" alt="Traveller on a boat deck over clear water" loading="lazy" /></div>
-              <div class="stop__body">
-                <div class="stop__head">
-                  <p class="stop__num mono">06 / 06 · The far north</p>
-                  <h3 class="stop__name">Diglipur</h3>
-                  <p class="stop__alt mono">North Andaman · 13.26° N 93.01° E</p>
-                </div>
-                <p class="stop__text">The edge of the map. Twin islands of Ross &amp; Smith joined by a sandbar, the climb up Saddle Peak, and turtle-nesting beaches.</p>
-                <ul class="chips"><li>Ross &amp; Smith</li><li>Saddle Peak</li><li>Kalipur</li></ul>
-              </div>
-            </article>
+          <div class="feature" data-reveal style="--d:.12s">
+            <span class="feature__icon"><svg class="ic"><use href="#i-ship"/></svg></span>
+            <div><h3>Ferry + Hotel Arrangements</h3><p>Hassle-free ferry bookings and handpicked stays.</p></div>
           </div>
-          <div class="crossing__dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 03 · FIRE AT SEA ================= -->
-    <section class="volcano" id="volcano" data-chapter="03" data-chapter-name="Fire at Sea">
-      <div class="volcano__pin">
-        <canvas class="embers" aria-hidden="true"></canvas>
-        <div class="volcano__ambient" aria-hidden="true">
-          <video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/volcano-smoke.mp4" data-poster="/media/video/volcano-smoke.webp"></video>
-        </div>
-        <h2 class="volcano__title" aria-label="Fire at sea">
-          <span class="volcano__word volcano__word--l" aria-hidden="true">Fire</span>
-          <span class="volcano__word volcano__word--r" aria-hidden="true"><em>at</em> Sea</span>
-        </h2>
-        <div class="volcano__frame" data-cursor="Barren">
-          <video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/volcano.mp4" data-poster="/media/video/volcano.webp"></video>
-        </div>
-        <div class="volcano__facts">
-          <p class="chapter-tag mono"><span>Chapter 03</span><i></i><span>Fire at Sea</span></p>
-          <p class="volcano__lede">Barren Island is India’s only active volcano — a smoking cone rising from the deep, far from any road.</p>
-          <dl class="facts mono">
-            <div><dt>Position</dt><dd>12.27° N · 93.85° E</dd></div>
-            <div><dt>From Sri Vijaya Puram</dt><dd>≈ 135 km by sea</dd></div>
-            <div><dt>How you see it</dt><dd>From the deck — landing isn’t permitted</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 04 · INTO THE BLUE (horizontal) ================= -->
-    <section class="blue" id="blue" data-chapter="04" data-chapter-name="Into the Blue">
-      <div class="blue__pin">
-        <div class="bubbles" aria-hidden="true"></div>
-        <div class="blue__head container">
-          <p class="chapter-tag mono reveal-up"><span>Chapter 04</span><i></i><span>Into the Blue</span></p>
-          <h2 class="section-title" data-split>Beneath, above &amp;<br /><em>beyond the water.</em></h2>
-        </div>
-        <div class="blue__track">
-          <article class="xp" data-cursor="Dive">
-            <div class="xp__media"><img src="/media/img/exp-scuba-sm.webp" srcset="/media/img/exp-scuba-sm.webp 600w, /media/img/exp-scuba.webp 1024w" sizes="(max-width:767px) 78vw, 30vw" alt="Scuba diver over a coral reef" loading="lazy" /></div>
-            <div class="xp__body"><span class="mono">01</span><h3>Scuba Diving</h3><p>First-timer try-dives to certified boat dives at Swaraj Dweep and North Bay.</p></div>
-          </article>
-          <article class="xp" data-cursor="Walk">
-            <div class="xp__media"><img src="/media/img/exp-seawalk-sm.webp" srcset="/media/img/exp-seawalk-sm.webp 600w, /media/img/exp-seawalk.webp 1024w" sizes="(max-width:767px) 78vw, 30vw" alt="Sea walk on the ocean floor among fish" loading="lazy" /></div>
-            <div class="xp__body"><span class="mono">02</span><h3>Sea Walk</h3><p>Stroll the sea floor with a helmet on — no swimming required.</p></div>
-          </article>
-          <article class="xp xp--video" data-cursor="Sail">
-            <div class="xp__media"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/wake.mp4" data-poster="/media/video/wake.webp"></video></div>
-            <div class="xp__body"><span class="mono">03</span><h3>Island Hopping</h3><p>Cruise &amp; ferry tickets sorted, so all you do is watch the wake.</p></div>
-          </article>
-          <article class="xp" data-cursor="Look">
-            <div class="xp__media"><img src="/media/img/exp-glassboat-sm.webp" srcset="/media/img/exp-glassboat-sm.webp 600w, /media/img/exp-glassboat.webp 1024w" sizes="(max-width:767px) 78vw, 30vw" alt="Coral seen through a glass-bottom boat" loading="lazy" /></div>
-            <div class="xp__body"><span class="mono">04</span><h3>Glass-Bottom Boats</h3><p>Coral gardens of the marine national park, dry and in full colour.</p></div>
-          </article>
-          <article class="xp" data-cursor="Glow">
-            <div class="xp__media"><img src="/media/img/exp-bioluminescence-sm.webp" srcset="/media/img/exp-bioluminescence-sm.webp 600w, /media/img/exp-bioluminescence.webp 1024w" sizes="(max-width:767px) 78vw, 30vw" alt="Kayak leaving glowing bioluminescent trails" loading="lazy" /></div>
-            <div class="xp__body"><span class="mono">05</span><h3>Night Kayaking</h3><p>Paddle a dark lagoon and watch every stroke light up blue.</p></div>
-          </article>
-          <article class="xp xp--video" data-cursor="Play">
-            <div class="xp__media"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/beach.mp4" data-poster="/media/video/beach.webp"></video></div>
-            <div class="xp__body"><span class="mono">06</span><h3>Beach Days</h3><p>Shade, sand and not a single thing on the schedule.</p></div>
-          </article>
-          <article class="xp" data-cursor="Love">
-            <div class="xp__media"><img src="/media/img/exp-honeymoon-sm.webp" srcset="/media/img/exp-honeymoon-sm.webp 600w, /media/img/exp-honeymoon.webp 1024w" sizes="(max-width:767px) 78vw, 30vw" alt="Candlelit dinner for two on the beach at sunset" loading="lazy" /></div>
-            <div class="xp__body"><span class="mono">07</span><h3>Honeymoons</h3><p>Sea-view rooms, candlelit beach dinners, flowers on the bed.</p></div>
-          </article>
-          <div class="xp xp--end">
-            <p class="mono">And so much more —</p>
-            <p class="xp__end-title">Kayaking, parasailing, trekking, game fishing, mangrove walks…</p>
-            <a href="#plan" class="btn btn--sun"><span>Build my itinerary</span></a>
-          </div>
-        </div>
-        <div class="blue__progress container" aria-hidden="true"><span class="mono">Drag the tide</span><div class="blue__bar"><i></i></div></div>
-      </div>
-    </section>
-
-    <!-- ================= 05 · VOYAGES (stacking cards) ================= -->
-    <section class="voyages" id="voyages" data-chapter="05" data-chapter-name="Voyages">
-      <div class="container">
-        <div class="voyages__head">
-          <p class="chapter-tag mono reveal-up"><span>Chapter 05</span><i></i><span>Voyages</span></p>
-          <h2 class="section-title" data-split>Journeys, <em>charted</em><br />for every kind of traveller.</h2>
-          <p class="voyages__intro reveal-up">Starting points, not set menus. Every voyage is tailored — hotels, cruises, cabs and sightseeing arranged end to end by our team in Sri Vijaya Puram.</p>
-        </div>
-
-        <div class="voyages__stack">
-          <article class="voyage" style="--accent: var(--sun)">
-            <div class="voyage__media"><img src="/media/img/photo-3.webp" alt="Turquoise lagoon and white beach" loading="lazy" /></div>
-            <div class="voyage__body">
-              <p class="voyage__tag mono">Bestseller · 6 Nights / 7 Days</p>
-              <h3>The Horizon Classic</h3>
-              <p class="voyage__route mono">Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep</p>
-              <p>The essential Andaman, unhurried. Heritage evenings in the capital, three nights of Swaraj Dweep beaches, and Neil’s slow mornings.</p>
-              <ul class="voyage__inc"><li>Hotels</li><li>Cruise tickets</li><li>AC cab</li><li>Sightseeing</li></ul>
-              <div class="voyage__foot">
-                <p class="voyage__price"><span class="mono">Starting</span><b>₹27,000</b></p>
-                <a class="btn btn--dark" data-wa-voyage="The Horizon Classic (6N/7D)" href="#plan"><span>Customise</span></a>
-              </div>
-            </div>
-          </article>
-          <article class="voyage" style="--accent: var(--coral)">
-            <div class="voyage__media"><img src="/media/img/exp-honeymoon.webp" alt="Beach dinner at sunset" loading="lazy" /></div>
-            <div class="voyage__body">
-              <p class="voyage__tag mono">Couples · 5 Nights / 6 Days</p>
-              <h3>Honeymoon by the Tide</h3>
-              <p class="voyage__route mono">Sri Vijaya Puram → Swaraj Dweep → Shaheed Dweep</p>
-              <p>Sea-view stays, a private candlelit dinner on the sand, sunset at Radhanagar and slow, dreamy island days for two.</p>
-              <ul class="voyage__inc"><li>Sea-view rooms</li><li>Beach dinner</li><li>Private cab</li><li>Cruise</li></ul>
-              <div class="voyage__foot">
-                <p class="voyage__price"><span class="mono">Pricing</span><b>Tailored quote</b></p>
-                <a class="btn btn--dark" data-wa-voyage="Honeymoon by the Tide (5N/6D)" href="#plan"><span>Customise</span></a>
-              </div>
-            </div>
-          </article>
-          <article class="voyage" style="--accent: var(--lagoon)">
-            <div class="voyage__media"><img src="/media/img/photo-10.webp" alt="Traveller on a boat over clear lagoon water" loading="lazy" /></div>
-            <div class="voyage__body">
-              <p class="voyage__tag mono">Families · 4 Nights / 5 Days</p>
-              <h3>Family Island Hopper</h3>
-              <p class="voyage__route mono">Sri Vijaya Puram → Ross &amp; North Bay → Swaraj Dweep</p>
-              <p>Glass-bottom boats, gentle beaches and short transfers — paced for grandparents, planned for kids.</p>
-              <ul class="voyage__inc"><li>Family rooms</li><li>Ferry tickets</li><li>AC cab</li><li>Activities</li></ul>
-              <div class="voyage__foot">
-                <p class="voyage__price"><span class="mono">Pricing</span><b>Tailored quote</b></p>
-                <a class="btn btn--dark" data-wa-voyage="Family Island Hopper (4N/5D)" href="#plan"><span>Customise</span></a>
-              </div>
-            </div>
-          </article>
-          <article class="voyage" style="--accent: var(--ember)">
-            <div class="voyage__media"><img src="/media/img/photo-2.webp" alt="Volcano at dusk" loading="lazy" /></div>
-            <div class="voyage__body">
-              <p class="voyage__tag mono">Explorers · 8 Nights / 9 Days</p>
-              <h3>Wild Andaman Expedition</h3>
-              <p class="voyage__route mono">Baratang → Rangat → Diglipur → Barren Island</p>
-              <p>For travellers who want the far side of the map — mangrove creeks, limestone caves, Saddle Peak and a volcano at sea.</p>
-              <ul class="voyage__inc"><li>Road &amp; sea</li><li>Permits help</li><li>Local guides</li><li>Stays</li></ul>
-              <div class="voyage__foot">
-                <p class="voyage__price"><span class="mono">Pricing</span><b>Tailored quote</b></p>
-                <a class="btn btn--dark" data-wa-voyage="Wild Andaman Expedition (8N/9D)" href="#plan"><span>Customise</span></a>
-              </div>
-            </div>
-          </article>
-          <article class="voyage" style="--accent: var(--sea-light)">
-            <div class="voyage__media"><img src="/media/img/exp-scuba.webp" alt="Diver over coral" loading="lazy" /></div>
-            <div class="voyage__body">
-              <p class="voyage__tag mono">Adventure · 5 Nights / 6 Days</p>
-              <h3>Blue Water Adventure</h3>
-              <p class="voyage__route mono">North Bay → Swaraj Dweep → Shaheed Dweep</p>
-              <p>Scuba, sea walk, snorkelling and night kayaking — the Andaman Sea from the inside out.</p>
-              <ul class="voyage__inc"><li>Dives</li><li>Sea walk</li><li>Kayaking</li><li>Cruise</li></ul>
-              <div class="voyage__foot">
-                <p class="voyage__price"><span class="mono">Pricing</span><b>Tailored quote</b></p>
-                <a class="btn btn--dark" data-wa-voyage="Blue Water Adventure (5N/6D)" href="#plan"><span>Customise</span></a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 06 · POSTCARDS ================= -->
-    <section class="postcards" id="postcards" data-chapter="06" data-chapter-name="Postcards">
-      <div class="container">
-        <div class="postcards__head">
-          <p class="chapter-tag mono reveal-up"><span>Chapter 06</span><i></i><span>Postcards</span></p>
-          <h2 class="section-title" data-split>Sent from the <em>islands.</em></h2>
-          <div class="rating reveal-up">
-            <div class="rating__score">5.0</div>
-            <div>
-              <div class="stars stars--lg">★★★★★</div>
-              <p class="mono">1,143 Google reviews · 5/5 on Justdial</p>
-            </div>
+          <div class="feature" data-reveal style="--d:.19s">
+            <span class="feature__icon"><svg class="ic"><use href="#i-checklist"/></svg></span>
+            <div><h3>Personalised Itineraries</h3><p>Trips tailored to your interests, time and travel style.</p></div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="reels" data-cursor="Drag" data-video-group>
-        <figure class="reel"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/reel-ferry.mp4" data-poster="/media/video/reel-ferry.webp"></video><figcaption class="mono">On the cruise</figcaption></figure>
-        <figure class="reel"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/reel-joy.mp4" data-poster="/media/video/reel-joy.webp"></video><figcaption class="mono">Shallow-water joy</figcaption></figure>
-        <figure class="reel reel--wide"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/reel-swing.mp4" data-poster="/media/video/reel-swing.webp"></video><figcaption class="mono">Beach swing</figcaption></figure>
-        <figure class="reel"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/reel-cliff.mp4" data-poster="/media/video/reel-cliff.webp"></video><figcaption class="mono">Cliffs &amp; blue</figcaption></figure>
-        <figure class="reel"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/reel-walk.mp4" data-poster="/media/video/reel-walk.webp"></video><figcaption class="mono">Shoreline walk</figcaption></figure>
-        <figure class="reel"><video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/lagoon.mp4" data-poster="/media/video/lagoon.webp"></video><figcaption class="mono">Lagoon</figcaption></figure>
+    <!-- ================= EXPLORE THE ISLANDS ================= -->
+    <section class="section islands">
+      <img class="deco-palm islands__palm" src="/media/img/gen/deco-palm.webp" alt="" loading="lazy" width="300" height="300" />
+      <div class="container islands__inner">
+        <div class="islands__copy" data-reveal>
+          <h2>Explore <em class="swoosh">the islands</em></h2>
+          <p>From world-famous beaches to hidden natural wonders, discover the unique charm of the Andaman Islands.</p>
+          <a class="btn" href="/destinations.html">Explore All Destinations <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="islands__grid" data-island-grid></div>
       </div>
+    </section>
 
-      <div class="quotes container">
-        <blockquote class="quote reveal-up"><p>“The hotels we stayed in, the food, car service and cruise service was good.”</p><cite class="mono">Google review</cite></blockquote>
-        <blockquote class="quote reveal-up"><p>“Well staff behaviour, good quality rooms.”</p><cite class="mono">Google review</cite></blockquote>
-        <blockquote class="quote reveal-up"><p>“Pantry service is great. Food was healthy and tasty — best at the price.”</p><cite class="mono">Google review</cite></blockquote>
+    <!-- ================= CURATED JOURNEYS ================= -->
+    <section class="section section--sand journeys">
+      <div class="container journeys__inner">
+        <div class="journeys__copy" data-reveal>
+          <h2>Curated <em class="swoosh">journeys</em></h2>
+          <p>Handpicked travel experiences designed for different travel styles — from classic getaways to romantic escapes and family adventures.</p>
+          <a class="link-arrow" href="/packages.html">View all packages <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <img class="journeys__shell" src="/media/img/gen/deco-shell.webp" alt="" loading="lazy" width="200" height="200" />
+        </div>
+        <div class="journeys__cards snap-row" data-featured-packages></div>
       </div>
+    </section>
 
-      <div class="polaroids" aria-label="Photos from Diganta journeys">
-        <figure class="polaroid"><img src="/media/img/photo-6-sm.webp" alt="Clear turquoise sea under a deep blue sky" loading="lazy" /><figcaption>blue on blue</figcaption></figure>
-        <figure class="polaroid"><img src="/media/img/photo-11-sm.webp" alt="Selfie at the helm of a cruise" loading="lazy" /><figcaption>with the captain</figcaption></figure>
-        <figure class="polaroid"><img src="/media/img/photo-3-sm.webp" alt="Beach with a shady tree" loading="lazy" /><figcaption>our spot</figcaption></figure>
-        <figure class="polaroid"><img src="/media/img/photo-7-sm.webp" alt="Traveller on a sunny beach" loading="lazy" /><figcaption>sun-kissed</figcaption></figure>
-        <figure class="polaroid"><img src="/media/img/photo-10-sm.webp" alt="Traveller on a boat over turquoise water" loading="lazy" /><figcaption>next stop: paradise</figcaption></figure>
+    <!-- ================= ADVENTURE BAND ================= -->
+    <section class="adventure on-dark">
+      <div class="adventure__media">
+        <video class="adventure__video" muted loop playsinline preload="none" poster="/media/video/web/scuba.webp" data-lazy-video aria-label="Scuba diving with an instructor over Andaman corals">
+          <source src="/media/video/web/scuba.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="container adventure__inner">
+        <div class="adventure__copy" data-reveal>
+          <h2>Adventure starts <em>beneath the surface</em></h2>
+          <p>Dive into a world of vibrant corals, exotic marine life and unforgettable water adventures in the Andaman.</p>
+        </div>
+        <ul class="adventure__list" data-reveal>
+          <li><a href="/experiences.html#scuba"><svg class="ic"><use href="#i-mask"/></svg>Scuba Diving</a></li>
+          <li><a href="/experiences.html#sea-walk"><svg class="ic"><use href="#i-helmet"/></svg>Sea Walk</a></li>
+          <li><a href="/experiences.html#kayaking"><svg class="ic"><use href="#i-kayak"/></svg>Kayaking</a></li>
+          <li><a href="/experiences.html#island-hopping"><svg class="ic"><use href="#i-ship"/></svg>Island Hopping</a></li>
+          <li><a href="/experiences.html#snorkelling"><svg class="ic"><use href="#i-snorkel"/></svg>Snorkelling</a></li>
+        </ul>
       </div>
     </section>
 
     <!-- ================= WHY DIGANTA ================= -->
-    <section class="why" id="why" data-chapter="06" data-chapter-name="Postcards">
-      <svg class="why__topo" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
-      <div class="container">
-        <div class="why__head">
-          <p class="chapter-tag mono reveal-up"><span>The crew</span><i></i><span>Why Diganta</span></p>
-          <h2 class="section-title" data-split>Local hands on <em>every</em><br />leg of the journey.</h2>
+    <section class="section why">
+      <img class="deco-palm why__palm" src="/media/img/gen/deco-palm.webp" alt="" loading="lazy" width="300" height="300" />
+      <div class="container why__inner">
+        <div class="why__media" data-reveal>
+          <img class="why__img" src="/media/img/gen/why-resort-sm.webp" alt="Thatched beach cottage among coconut palms facing the sea" loading="lazy" width="760" height="507" />
+          <img class="why__img why__img--small" src="/media/img/gen/svc-ferry-sm.webp" alt="Catamaran ferry crossing between islands" loading="lazy" width="760" height="507" />
+          <span class="why__badge"><strong>17+</strong>years of island expertise</span>
         </div>
-        <ul class="why__grid">
-          <li class="why__item reveal-up">
-            <svg class="draw" viewBox="0 0 48 48"><path d="M6 40V18l18-10 18 10v22M6 40h36M18 40V28h12v12"/></svg>
-            <h3>Hand-picked stays</h3><p>From beach huts to sea-view resorts — hotels we have checked in person.</p>
-          </li>
-          <li class="why__item reveal-up">
-            <svg class="draw" viewBox="0 0 48 48"><path d="M4 30h40l-6 10H10zM12 30l3-10h18l4 10M20 20l2-6h8l2 6M4 44c5-3 9-3 14 0s9 3 14 0 9-3 12 0"/></svg>
-            <h3>Cruise &amp; ferry tickets</h3><p>Seats confirmed on the island cruises, so the crossing is the easy part.</p>
-          </li>
-          <li class="why__item reveal-up">
-            <svg class="draw" viewBox="0 0 48 48"><path d="M6 32V24l5-10h26l5 10v8zM6 32v6h6v-6M36 32v6h6v-6M6 24h36"/><circle cx="14" cy="28" r="2"/><circle cx="34" cy="28" r="2"/></svg>
-            <h3>Private AC cabs</h3><p>Airport pick-up to final drop — clean cars and drivers who know every road.</p>
-          </li>
-          <li class="why__item reveal-up">
-            <svg class="draw" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 10l5 14-5 14-5-14z"/></svg>
-            <h3>Sightseeing &amp; activities</h3><p>Scuba slots, sea walks and day trips booked around your pace.</p>
-          </li>
-          <li class="why__item reveal-up">
-            <svg class="draw" viewBox="0 0 48 48"><path d="M10 6h20l8 8v28H10zM30 6v8h8M16 22h16M16 28h16M16 34h10"/></svg>
-            <h3>Itineraries, tailored</h3><p>Your dates, your budget, your style — no fixed menus.</p>
-          </li>
-          <li class="why__item reveal-up">
-            <svg class="draw" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 6"/></svg>
-            <h3>Open 24 hours</h3><p>A real team in Sri Vijaya Puram, reachable day and night while you travel.</p>
-          </li>
-        </ul>
+        <div class="why__copy" data-reveal>
+          <h2>Why explore <em class="swoosh">with Diganta?</em></h2>
+          <p>A reliable travel partner for a seamless, comfortable and well-planned Andaman holiday — 17 years on the islands and a 5.0★ rating from 1,143 travellers.</p>
+        </div>
+        <div class="why__features">
+          <div class="feature" data-reveal><span class="feature__icon"><svg class="ic"><use href="#i-bed"/></svg></span><div><h3>Hotel Stays</h3><p>Carefully selected, comfortable stays across major islands.</p></div></div>
+          <div class="feature" data-reveal style="--d:.08s"><span class="feature__icon"><svg class="ic"><use href="#i-ship"/></svg></span><div><h3>Cruise and Ferries</h3><p>Convenient and reliable ferry and cruise arrangements.</p></div></div>
+          <div class="feature" data-reveal style="--d:.16s"><span class="feature__icon"><svg class="ic"><use href="#i-car"/></svg></span><div><h3>AC Cabs</h3><p>Hassle-free, comfortable transfers and local travel.</p></div></div>
+          <div class="feature" data-reveal style="--d:.24s"><span class="feature__icon"><svg class="ic"><use href="#i-binoculars"/></svg></span><div><h3>Sightseeing &amp; Activities</h3><p>Curated experiences to explore the best of Andaman.</p></div></div>
+        </div>
       </div>
     </section>
 
-    <!-- ================= 07 · ARRIVAL / PLAN ================= -->
-    <section class="arrival" id="plan" data-chapter="07" data-chapter-name="Arrival">
-      <div class="arrival__bg" aria-hidden="true">
-        <video class="lazy-video" muted loop playsinline preload="none" data-src="/media/video/sunset.mp4" data-poster="/media/video/sunset.webp"></video>
-      </div>
-      <div class="container arrival__grid">
-        <div class="arrival__copy">
-          <p class="chapter-tag mono reveal-up"><span>Chapter 07</span><i></i><span>Arrival</span></p>
-          <h2 class="arrival__title" data-split>Your horizon<br /><em>is waiting.</em></h2>
-          <p class="arrival__lede reveal-up">Tell us a little about your trip. A Diganta trip planner will reply on WhatsApp with an itinerary built around you — usually within the hour.</p>
-          <div class="arrival__contact reveal-up">
-            <a data-tel href="tel:+918001661774" class="arrival__phone"><span class="mono">Call, any hour</span>080016 61774</a>
-          </div>
+    <!-- ================= TYPICAL ITINERARY ================= -->
+    <section class="section--tight section--mint itinerary-band">
+      <div class="container itinerary-band__inner">
+        <div class="itinerary-band__copy" data-reveal>
+          <h2>A typical <em class="swoosh">island itinerary</em></h2>
+          <p>Here’s how your Andaman journey can unfold — a perfect balance of exploration, relaxation and experiences.</p>
         </div>
+        <ol class="steps">
+          <li data-reveal style="--d:0s"><span class="steps__icon"><svg class="ic"><use href="#i-plane"/></svg></span><span class="steps__day">Day 1</span>Arrive at Sri Vijaya Puram</li>
+          <li data-reveal style="--d:.06s"><span class="steps__icon"><svg class="ic"><use href="#i-ship"/></svg></span><span class="steps__day">Day 2</span>Ferry to Swaraj Dweep</li>
+          <li data-reveal style="--d:.12s"><span class="steps__icon"><svg class="ic"><use href="#i-snorkel"/></svg></span><span class="steps__day">Day 3</span>Beach &amp; Water Activities</li>
+          <li data-reveal style="--d:.18s"><span class="steps__icon"><svg class="ic"><use href="#i-palm"/></svg></span><span class="steps__day">Day 4</span>Explore Shaheed Dweep</li>
+          <li data-reveal style="--d:.24s"><span class="steps__icon"><svg class="ic"><use href="#i-tree"/></svg></span><span class="steps__day">Day 5</span>Nature Trail at Baratang</li>
+          <li data-reveal style="--d:.30s"><span class="steps__icon"><svg class="ic"><use href="#i-binoculars"/></svg></span><span class="steps__day">Day 6</span>Leisure &amp; Local Sightseeing</li>
+          <li data-reveal style="--d:.36s"><span class="steps__icon"><svg class="ic"><use href="#i-flag"/></svg></span><span class="steps__day">Day 7</span>Return with Island Memories</li>
+        </ol>
+      </div>
+    </section>
 
-        <form class="planner reveal-up" novalidate>
-          <p class="planner__title mono">Trip planner</p>
-          <label class="field">
-            <span>Your name</span>
-            <input type="text" name="name" autocomplete="name" required maxlength="60" placeholder="e.g. Ananya" />
-          </label>
-          <div class="field-row">
-            <label class="field">
-              <span>Travel month</span>
-              <span class="select">
-                <select name="month" required>
-                  <option value="" selected disabled>Choose a month</option>
-                </select>
-              </span>
-            </label>
-            <div class="field">
-              <span id="pax-label">Travellers</span>
-              <div class="stepper" role="group" aria-labelledby="pax-label">
-                <button type="button" class="stepper__btn" data-step="-1" aria-label="Fewer travellers">−</button>
-                <input type="text" name="pax" value="2" inputmode="numeric" pattern="[0-9]*" maxlength="2" aria-labelledby="pax-label" />
-                <button type="button" class="stepper__btn" data-step="1" aria-label="More travellers">+</button>
-              </div>
-            </div>
+    <!-- ================= FERRY ROUTES TEASER ================= -->
+    <section class="section ferry-teaser">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div data-reveal>
+            <span class="eyebrow">Destination &amp; ferry routes</span>
+            <h2>Island hopping, <em class="swoosh">made simple</em></h2>
+            <p>Every crossing in your itinerary is booked, timed and re-confirmed by our team — here are the routes most travellers take.</p>
           </div>
-          <label class="field">
-            <span>Nights: <b class="planner__nights">5</b></span>
-            <input type="range" name="nights" min="2" max="12" value="5" />
-          </label>
-          <fieldset class="field">
-            <legend>I’m dreaming of</legend>
-            <div class="toggles">
-              <label><input type="checkbox" name="vibe" value="Beaches" checked /><span>Beaches</span></label>
-              <label><input type="checkbox" name="vibe" value="Honeymoon" /><span>Honeymoon</span></label>
-              <label><input type="checkbox" name="vibe" value="Scuba &amp; water sports" /><span>Scuba</span></label>
-              <label><input type="checkbox" name="vibe" value="Family" /><span>Family</span></label>
-              <label><input type="checkbox" name="vibe" value="Offbeat (Baratang / Diglipur)" /><span>Offbeat</span></label>
-              <label><input type="checkbox" name="vibe" value="Barren Island volcano" /><span>Volcano</span></label>
-            </div>
-          </fieldset>
-          <p class="planner__error" role="alert"></p>
-          <button type="submit" class="btn btn--sun btn--block" data-cursor="Send">
-            <span>Send on WhatsApp</span>
-            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
-          </button>
-        </form>
+          <a class="btn btn--outline" href="/destinations.html#ferry-routes" data-reveal>All Routes &amp; Operators <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="route-list route-list--cols snap-row" data-route-teaser></div>
+      </div>
+    </section>
+
+    <!-- ================= POSTCARDS ================= -->
+    <section class="section--tight section--white postcards">
+      <img class="deco-palm postcards__palm" src="/media/img/gen/deco-palm.webp" alt="" loading="lazy" width="300" height="300" />
+      <div class="container postcards__inner">
+        <div class="postcards__copy" data-reveal>
+          <h2>Postcards from <em class="swoosh">the Andamans</em></h2>
+          <a class="link-arrow" href="/gallery.html">Open the gallery <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="postcards__grid snap-row">
+          <a href="/gallery.html" class="postcard" data-reveal><span class="postcard__photo"><img src="/media/img/photo-5-sm.webp" alt="A leafy tree shading a white beach on turquoise water" loading="lazy" /></span><span class="postcard__cap">Swaraj Dweep</span></a>
+          <a href="/gallery.html" class="postcard" data-reveal style="--d:.08s"><span class="postcard__photo"><img src="/media/img/gen/post-sunset-jetty-sm.webp" alt="Wooden jetty at sunset" loading="lazy" /></span><span class="postcard__cap">Golden hour</span></a>
+          <a href="/gallery.html" class="postcard" data-reveal style="--d:.16s"><span class="postcard__photo"><img src="/media/img/gen/post-mangrove-sm.webp" alt="Mangrove roots in clear water" loading="lazy" /></span><span class="postcard__cap">Baratang mangroves</span></a>
+          <a href="/gallery.html" class="postcard" data-reveal style="--d:.24s"><span class="postcard__photo"><img src="/media/img/photo-6-sm.webp" alt="Empty white beach and turquoise sea under a blue sky" loading="lazy" /></span><span class="postcard__cap">Neil Island blues</span></a>
+        </div>
+      </div>
+      <div class="container reviews" data-reveal>
+        <div class="reviews__score">
+          <strong>5.0</strong>
+          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <small>1,143 Google reviews</small>
+        </div>
+        <blockquote><span class="stars" aria-hidden="true">★★★★★</span><p>“The hotels we stayed in, the food, car service and cruise service was good.”</p><cite><span class="reviews__g" aria-hidden="true">G</span>Verified Google review</cite></blockquote>
+        <blockquote><span class="stars" aria-hidden="true">★★★★★</span><p>“Well staff behaviour, good quality rooms.”</p><cite><span class="reviews__g" aria-hidden="true">G</span>Verified Google review</cite></blockquote>
+        <blockquote><span class="stars" aria-hidden="true">★★★★★</span><p>“Pantry service is great. Food was healthy and tasty — best at the price.”</p><cite><span class="reviews__g" aria-hidden="true">G</span>Verified Google review</cite></blockquote>
       </div>
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <img src="/media/img/logo.webp" alt="Diganta Travels Pvt. Ltd." width="900" height="297" loading="lazy" />
-        <p>Andaman journeys, charted by locals for 17 years.</p>
-      </div>
-      <div>
-        <p class="mono footer__label">Visit</p>
-        <address>Katchal Inn Hotel, Babu Lane,<br />Mohanpura, Sri Vijaya Puram,<br />Andaman &amp; Nicobar Islands 744101</address>
-        <a class="footer__link" href="https://www.google.com/maps/search/?api=1&query=Diganta+Travels+Pvt+Ltd+Sri+Vijaya+Puram" target="_blank" rel="noopener">Get directions ↗</a>
-      </div>
-      <div>
-        <p class="mono footer__label">Talk</p>
-        <a class="footer__link" data-tel href="tel:+918001661774">080016 61774</a>
-        <a class="footer__link" data-wa href="#plan">WhatsApp us</a>
-        <a class="footer__link" href="https://www.instagram.com/andamandiganta/" target="_blank" rel="noopener">@andamandiganta</a>
-        <p class="mono footer__hours">Open 24 hours</p>
-      </div>
-    </div>
-    <div class="footer__mark" aria-hidden="true">
-      <div class="footer__sky"><div class="footer__sun"></div></div>
-      <span class="footer__word">Diganta</span>
-      <i class="footer__horizon"></i>
-    </div>
-    <div class="container footer__legal mono">
-      <span>© <span class="year">2026</span> Diganta Travels Pvt. Ltd.</span>
-      <a href="#top">Back to the horizon ↑</a>
-    </div>
-  </footer>
-
-  <a class="wa-float" data-wa href="#plan" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.9 1 3.9.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg>
-  </a>
-
-  <script type="module" src="/src/main.js"></script>
+  <!-- @include footer -->
 </body>
 </html>

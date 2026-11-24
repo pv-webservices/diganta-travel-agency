@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- @include head -->
+  <title>Andaman Tour Package Itinerary | Diganta Travels</title>
+  <meta name="description" content="Day-by-day Andaman tour itinerary with hotels, cruises, AC cab transfers and sightseeing arranged by Diganta Travels, Sri Vijaya Puram." />
+  <script type="module" src="/src/pages/package.js"></script>
+</head>
+<body data-page="package">
+  <!-- @include header -->
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__bg"><img data-pkg-hero src="/media/img/gen/pkg-classic.webp" alt="" /></div>
+      <div class="container">
+        <ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/packages.html">Tour Packages</a></li><li data-pkg-crumb>Itinerary</li></ol>
+        <span class="badge" data-pkg-badge hidden></span>
+        <h1 data-pkg-title>Andaman itinerary</h1>
+        <p data-pkg-summary></p>
+        <div class="page-hero__meta" data-pkg-meta></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 24px">
+      <div class="container with-aside" data-pkg-body>
+        <div>
+          <div class="block">
+            <h2>Trip <em>overview</em></h2>
+            <p class="lead" data-pkg-route></p>
+            <div class="stays" data-pkg-stays role="group" aria-label="Nights per island"></div>
+            <div class="highlights" data-pkg-highlights></div>
+          </div>
+          <div class="block">
+            <h2>Day-by-day <em>itinerary</em></h2>
+            <div class="accordion days" data-pkg-days></div>
+          </div>
+          <div class="block">
+            <h2>Inclusions &amp; <em>exclusions</em></h2>
+            <div class="incl">
+              <div class="panel incl__yes"><h3>What’s included</h3><ul data-pkg-incl></ul></div>
+              <div class="panel incl__no"><h3>Not included</h3><ul data-pkg-excl></ul></div>
+            </div>
+          </div>
+          <div class="note-box">
+            <svg class="ic"><use href="#i-shield"/></svg>
+            <p>Prices depend on your dates, hotel category and group size. Cruise timings and sea conditions can change the order of days — our team re-confirms every sailing and adjusts the plan with you. Final inclusions are confirmed in your written quotation.</p>
+          </div>
+        </div>
+
+        <aside class="aside">
+          <div class="panel">
+            <div class="price-tag" data-pkg-price></div>
+            <h3>Customise this trip</h3>
+            <form data-wa-form="Package enquiry" novalidate>
+              <input type="hidden" name="package" data-pkg-field />
+              <label class="field">Your name<input name="name" required maxlength="60" autocomplete="name" /></label>
+              <label class="field">Phone / WhatsApp<input name="phone" type="tel" maxlength="18" autocomplete="tel" /></label>
+              <label class="field">Travel month<select name="month" data-month-options><option value="">Choose a month</option></select></label>
+              <label class="field">Travellers<select name="travellers"><option>2 Adults</option><option>1 Adult</option><option>2 Adults + 1 Child</option><option>2 Adults + 2 Children</option><option>3–4 Adults</option><option>Group (5+)</option></select></label>
+              <label class="field">Changes you’d like<textarea name="message" maxlength="500" rows="3" placeholder="e.g. add a night in Havelock, sea-view rooms"></textarea></label>
+              <button class="btn btn--sun btn--block" type="submit"><svg class="ic"><use href="#i-whatsapp"/></svg>Send on WhatsApp</button>
+              <p class="form-note" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="panel panel--dark">
+            <div class="call-card">
+              <span class="feature__icon"><svg class="ic"><use href="#i-phone"/></svg></span>
+              <div><small>Prefer to talk? Call any hour</small><a data-tel href="tel:+918001661774"><strong data-phone-text>080016 61774</strong></a></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--sand">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div><span class="eyebrow">You may also like</span><h2>Similar <em>journeys</em></h2></div>
+          <a class="btn btn--outline" href="/packages.html">All Packages <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="pkg-grid" data-pkg-similar></div>
+      </div>
+    </section>
+  </main>
+  <!-- @include footer -->
+</body>
+</html>
