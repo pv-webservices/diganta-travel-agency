@@ -3,7 +3,7 @@
 // (elements carrying data-tel, data-wa, data-mail are rewired at runtime).
 export const CONTACT = Object.freeze({
   company: 'Diganta Travels Pvt. Ltd.',
-  phoneDisplay: '080016 61774',
+  phoneDisplay: '+91 80016 61774',
   phoneTel: '+918001661774',
   whatsapp: '918001661774',
   email: 'info@digantatravels.in',

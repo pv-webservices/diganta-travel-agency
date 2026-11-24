@@ -257,7 +257,7 @@
   .hero__bg img { object-position: 50% 100%; }
   .hero__badge { font-size: 0.74rem; margin-bottom: 16px; }
   .hero__line { font-size: 2.15rem; }
-  .hero__big { font-size: 4.1rem; }
+  .hero__big { font-size: clamp(2.9rem, 16.5vw, 4.1rem); }
   .hero__text { font-size: 0.98rem; margin-bottom: 22px; }
   .hero__ctas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .hero__ctas .btn { padding: 0.9em 0.6em; font-size: 0.88rem; }

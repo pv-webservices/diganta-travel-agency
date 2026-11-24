@@ -22,8 +22,10 @@
   --line: #e3e0d3;
   --white: #fff;
 
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Besley (display) + Figtree (body): both draw a flagged "1" that never reads as "I",
+     and lining figures keep prices, phone numbers and stats at full height. */
+  --font-display: 'Besley', Georgia, 'Times New Roman', serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --radius-sm: 8px;
   --radius: 14px;
@@ -32,7 +34,8 @@
   --shadow-sm: 0 2px 8px rgb(10 58 36 / 0.07);
   --shadow: 0 10px 30px rgb(10 58 36 / 0.1);
   --shadow-lg: 0 24px 60px rgb(10 58 36 / 0.16);
-  --container: 1200px;
+  /* Content width: 1200px on laptops, then ~86% of the screen up to 1680px on large monitors */
+  --container: clamp(1200px, 86vw, 1680px);
   --gutter: clamp(16px, 4vw, 32px);
   --section: clamp(56px, 8vw, 96px);
   --header-h: 78px;
@@ -49,6 +52,7 @@ body {
   line-height: 1.65;
   color: var(--body);
   background: var(--cream);
+  font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -77,6 +81,8 @@ h4 { font-size: 1rem; font-family: var(--font-body); font-weight: 600; }
   white-space: nowrap;
 }
 .on-dark h1 em, .on-dark h2 em { color: var(--sun); }
+/* Long italic phrases (“beneath the surface”) may wrap on phones; swoosh accents stay on one line */
+@media (max-width: 480px) { h1 em:not(.swoosh), h2 em:not(.swoosh) { white-space: normal; } }
 .swoosh { position: relative; display: inline-block; width: fit-content; padding-bottom: 0.18em; }
 .swoosh::after {
   content: '';
